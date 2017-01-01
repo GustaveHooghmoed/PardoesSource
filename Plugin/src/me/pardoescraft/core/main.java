@@ -17,6 +17,8 @@ public class main extends JavaPlugin {
     private void registerEvents() {
         PluginManager plm = Bukkit.getPluginManager();
         plm.registerEvents(new Events(), this);
+        plm.registerEvents(new MusicMenu(), this);
+        getCommand("musicmenu").setExecutor(new MusicMenu());
     }
 
     public void onDisable(){
