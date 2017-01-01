@@ -1,5 +1,7 @@
 package me.pardoescraft.core;
 
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -13,7 +15,8 @@ public class main extends JavaPlugin {
     }
 
     private void registerEvents() {
-
+        PluginManager plm = Bukkit.getPluginManager();
+        plm.registerEvents(new Events(), this);
     }
 
     public void onDisable(){
